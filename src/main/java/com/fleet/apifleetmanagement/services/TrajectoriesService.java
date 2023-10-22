@@ -2,6 +2,7 @@ package com.fleet.apifleetmanagement.services;
 
 import org.springframework.stereotype.Service;
 
+import com.fleet.apifleetmanagement.model.Trajectories;
 import com.fleet.apifleetmanagement.repository.TrajectoriesRepository;
 @Service
 public class TrajectoriesService {
@@ -11,7 +12,7 @@ public class TrajectoriesService {
         this.trajectoriesRepository = trajectoriesRepository;
     }
 
-    public TrajectoriesRepository findLastLocationByTaxiId(int taxiId) {
-        return trajectoriesRepository.findLastLocationByTaxiId(taxiId);
+    public Trajectories findLastLocationByTaxiId(int taxiId) {
+        return (Trajectories) trajectoriesRepository.findLastLocationByTaxiId(taxiId);
     }
 }
