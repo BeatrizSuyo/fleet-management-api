@@ -1,8 +1,11 @@
 package com.fleet.apifleetmanagement.services;
 
+import org.springframework.stereotype.Service;
+
 import com.fleet.apifleetmanagement.model.Taxi;
 import com.fleet.apifleetmanagement.repository.TaxiRepository;
 
+@Service
 public class TaxiService {
      private final TaxiRepository taxiRepository;
 

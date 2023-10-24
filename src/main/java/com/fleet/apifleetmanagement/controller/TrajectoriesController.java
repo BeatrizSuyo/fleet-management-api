@@ -1,6 +1,6 @@
 package com.fleet.apifleetmanagement.controller;
 
-import org.springframework.context.annotation.Configuration;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.fleet.apifleetmanagement.model.Trajectories;
 import com.fleet.apifleetmanagement.services.TrajectoriesService;
 
-@Configuration
+
 @RestController
 @RequestMapping("trajectoriesApi")
 public class TrajectoriesController {
