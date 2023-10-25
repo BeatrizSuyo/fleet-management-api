@@ -7,19 +7,18 @@ import com.fleet.apifleetmanagement.repository.TaxiRepository;
 
 @Service
 public class TaxiService {
-     private final TaxiRepository taxiRepository;
+private final TaxiRepository taxiRepository;
 
-    public TaxiService(TaxiRepository taxiRepository) {
-        this.taxiRepository = taxiRepository;
-    }
+public TaxiService(TaxiRepository taxiRepository) {
+this.taxiRepository = taxiRepository;
+}
 
 
-    public Taxi getTaxiById(int id) {
+public Taxi getTaxiById(int id) {
+return taxiRepository.findById(id);
+}
 
-        return taxiRepository.findById(id);
-    }
-
-    public Taxi getTaxiByPlaca(String placa){
-        return taxiRepository.findByPlaca(placa);
-    }
+public Taxi getTaxiByLicense(String license){
+return taxiRepository.findByLicense(license);
+}
 }

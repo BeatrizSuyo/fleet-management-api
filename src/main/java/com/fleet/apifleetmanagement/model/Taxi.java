@@ -11,13 +11,13 @@ import jakarta.persistence.Table;
 public class Taxi {
     @Id
     private int id;
-    private String placa;
+    private String license;
 
     protected Taxi(){}
 
-    public Taxi(int id, String placa){
+    public Taxi(int id, String license){
         this.id=id;
-        this.placa=placa;
+        this.license = license;
     }
     public int getId(){
         return id;
@@ -25,11 +25,11 @@ public class Taxi {
     public void setId(int id){
         this.id=id;
     }
-    public String getPlaca(){
-        return placa;
+    public String getLicense(){
+        return license;
     }
-    public void setPlaca(String placa){
-        this.placa = placa;
+    public void setLicense(String license){
+        this.license = license;
     }
 
 }

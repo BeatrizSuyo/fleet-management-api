@@ -11,6 +11,6 @@ public interface TaxiRepository extends JpaRepository<com.fleet.apifleetmanageme
     @Query("SELECT t FROM Taxi t WHERE t.id = :id")
     com.fleet.apifleetmanagement.model.Taxi findById(@Param("id") int id);
 
-    @Query("SELECT t FROM Taxi t WHERE t.placa = :placa")
-    com.fleet.apifleetmanagement.model.Taxi findByPlaca(@Param("placa") String placa);
+    @Query("SELECT t FROM Taxi t WHERE t.license = :license")
+    com.fleet.apifleetmanagement.model.Taxi findByLicense(@Param("license") String license);
 }

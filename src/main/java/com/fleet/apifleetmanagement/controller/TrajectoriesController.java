@@ -13,14 +13,14 @@ import com.fleet.apifleetmanagement.services.TrajectoriesService;
 @RestController
 @RequestMapping("trajectoriesApi")
 public class TrajectoriesController {
-    private final TrajectoriesService trajectoriesService;
+private final TrajectoriesService trajectoriesService;
 
-    public TrajectoriesController(TrajectoriesService trajectoriesService) {
-        this.trajectoriesService = trajectoriesService;
-    }
+public TrajectoriesController(TrajectoriesService trajectoriesService) {
+this.trajectoriesService = trajectoriesService;
+}
 
-    @GetMapping("/trajectories/{taxiId}")
-    public Trajectories findLastLocationByTaxiId(@PathVariable("taxiId") int taxiId) {
-        return trajectoriesService.findLastLocationByTaxiId(taxiId);
-    }
+@GetMapping("/trajectories/{taxiId}")
+public Trajectories findLastLocationByTaxiId(@PathVariable("taxiId") int taxiId) {
+return trajectoriesService.findLastLocationByTaxiId(taxiId);
+}
 }

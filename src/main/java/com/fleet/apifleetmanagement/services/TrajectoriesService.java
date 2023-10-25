@@ -6,13 +6,13 @@ import com.fleet.apifleetmanagement.model.Trajectories;
 import com.fleet.apifleetmanagement.repository.TrajectoriesRepository;
 @Service
 public class TrajectoriesService {
-    private final TrajectoriesRepository trajectoriesRepository;
+private final TrajectoriesRepository trajectoriesRepository;
 
-    public TrajectoriesService(TrajectoriesRepository trajectoriesRepository) {
-        this.trajectoriesRepository = trajectoriesRepository;
-    }
+public TrajectoriesService(TrajectoriesRepository trajectoriesRepository) {
+this.trajectoriesRepository = trajectoriesRepository;
+}
 
-    public Trajectories findLastLocationByTaxiId(int taxiId) {
+public Trajectories findLastLocationByTaxiId(int taxiId) {
         return (Trajectories) trajectoriesRepository.findLastLocationByTaxiId(taxiId);
     }
 }
